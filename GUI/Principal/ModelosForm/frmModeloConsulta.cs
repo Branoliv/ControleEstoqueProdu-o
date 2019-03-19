@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace GUI
+{
+    public partial class frmModeloConsulta : Form
+    {      
+        public frmModeloConsulta()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
+
+        private void frmModeloConsulta_Load(object sender, EventArgs e)
+        {
+            LblTituloModeloConsulta.Text = this.Text;
+        }
+
+        private void frmModeloConsulta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.SelectNextControl(this.ActiveControl, !e.Shift, true, true, true);
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnSair_Click(sender, e);
+            }
+        }
+    }
+}

@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE869E59-B39E-4AC4-A70F-98C900E27DE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastros\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmFornecedor.Designer.cs">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmSubGrupoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmSubGrupoMaterial.Designer.cs">
+      <DependentUpon>frmSubGrupoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaSpTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaSpTipoProduto.Designer.cs">
+      <DependentUpon>frmConsultaSpTipoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaCliente.Designer.cs">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmGrupoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmGrupoMaterial.Designer.cs">
+      <DependentUpon>frmGrupoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaGrpMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaGrpMaterial.Designer.cs">
+      <DependentUpon>frmConsultaGrpMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaSubGrupoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaSubGrupoMaterial.Designer.cs">
+      <DependentUpon>frmConsultaSubGrupoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmUnidadeDeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmUnidadeDeMedida.Designer.cs">
+      <DependentUpon>frmUnidadeDeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaUnidadeDeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaUnidadeDeMedida.Designer.cs">
+      <DependentUpon>frmConsultaUnidadeDeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ferramentas\frmBackupBandoDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferramentas\frmBackupBandoDados.Designer.cs">
+      <DependentUpon>frmBackupBandoDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ferramentas\frmConfigBancoDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferramentas\frmConfigBancoDados.Designer.cs">
+      <DependentUpon>frmConfigBancoDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaProduto.Designer.cs">
+      <DependentUpon>frmConsultaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaTipoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaTipoPagamento.Designer.cs">
+      <DependentUpon>frmConsultaTipoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaFornecedor.Designer.cs">
+      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaDeposito.Designer.cs">
+      <DependentUpon>frmConsultaDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmDeposito.Designer.cs">
+      <DependentUpon>frmDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmItensDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmItensDeposito.Designer.cs">
+      <DependentUpon>frmItensDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaEstoque.Designer.cs">
+      <DependentUpon>frmConsultaEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaItensDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaItensDeposito.Designer.cs">
+      <DependentUpon>frmConsultaItensDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaSpProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaSpProduto.Designer.cs">
+      <DependentUpon>frmConsultaSpProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaCompras.Designer.cs">
+      <DependentUpon>frmConsultaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmPlanoDeProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmPlanoDeProducao.Designer.cs">
+      <DependentUpon>frmPlanoDeProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaPlanoProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaPlanoProducao.Designer.cs">
+      <DependentUpon>frmConsultaPlanoProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaPedidoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaPedidoVenda.Designer.cs">
+      <DependentUpon>frmConsultaPedidoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaOrdemProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaOrdemProducao.Designer.cs">
+      <DependentUpon>frmConsultaOrdemProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmItensPedidoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmItensPedidoVenda.Designer.cs">
+      <DependentUpon>frmItensPedidoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmOrdemProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmOrdemProducao.Designer.cs">
+      <DependentUpon>frmOrdemProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaTipoProduto.Designer.cs">
+      <DependentUpon>frmConsultaTipoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimentos\frmApontamentoProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimentos\frmApontamentoProducao.Designer.cs">
+      <DependentUpon>frmApontamentoProducao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmTipoProduto.Designer.cs">
+      <DependentUpon>frmTipoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimentos\frmPedidoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimentos\frmPedidoVenda.Designer.cs">
+      <DependentUpon>frmPedidoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\ModelosForm\frmModeloConsultaSimples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\ModelosForm\frmModeloConsultaSimples.Designer.cs">
+      <DependentUpon>frmModeloConsultaSimples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimentos\frmPagamentoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimentos\frmPagamentoCompra.Designer.cs">
+      <DependentUpon>frmPagamentoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmTipoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmTipoPagamento.Designer.cs">
+      <DependentUpon>frmTipoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimentos\frmMovimentacaoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimentos\frmMovimentacaoCompra.Designer.cs">
+      <DependentUpon>frmMovimentacaoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\ModelosForm\frmModeloCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\ModelosForm\frmModeloCadastro.Designer.cs">
+      <DependentUpon>frmModeloCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\ModelosForm\frmModeloConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\ModelosForm\frmModeloConsulta.Designer.cs">
+      <DependentUpon>frmModeloConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cadastros\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaSpTipoProduto.resx">
+      <DependentUpon>frmConsultaSpTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaCliente.resx">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmGrupoMaterial.resx">
+      <DependentUpon>frmGrupoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaGrpMaterial.resx">
+      <DependentUpon>frmConsultaGrpMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaSubGrupoMaterial.resx">
+      <DependentUpon>frmConsultaSubGrupoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaUnidadeDeMedida.resx">
+      <DependentUpon>frmConsultaUnidadeDeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferramentas\frmBackupBandoDados.resx">
+      <DependentUpon>frmBackupBandoDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferramentas\frmConfigBancoDados.resx">
+      <DependentUpon>frmConfigBancoDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaProduto.resx">
+      <DependentUpon>frmConsultaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaTipoPagamento.resx">
+      <DependentUpon>frmConsultaTipoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaFornecedor.resx">
+      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaDeposito.resx">
+      <DependentUpon>frmConsultaDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmDeposito.resx">
+      <DependentUpon>frmDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmItensDeposito.resx">
+      <DependentUpon>frmItensDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaEstoque.resx">
+      <DependentUpon>frmConsultaEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaItensDeposito.resx">
+      <DependentUpon>frmConsultaItensDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaSpProduto.resx">
+      <DependentUpon>frmConsultaSpProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaCompras.resx">
+      <DependentUpon>frmConsultaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmPlanoDeProducao.resx">
+      <DependentUpon>frmPlanoDeProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaPlanoProducao.resx">
+      <DependentUpon>frmConsultaPlanoProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaPedidoVenda.resx">
+      <DependentUpon>frmConsultaPedidoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaOrdemProducao.resx">
+      <DependentUpon>frmConsultaOrdemProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmItensPedidoVenda.resx">
+      <DependentUpon>frmItensPedidoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmOrdemProducao.resx">
+      <DependentUpon>frmOrdemProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaTipoProduto.resx">
+      <DependentUpon>frmConsultaTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimentos\frmApontamentoProducao.resx">
+      <DependentUpon>frmApontamentoProducao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmTipoProduto.resx">
+      <DependentUpon>frmTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimentos\frmPedidoVenda.resx">
+      <DependentUpon>frmPedidoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimentos\frmPagamentoCompra.resx">
+      <DependentUpon>frmPagamentoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\ModelosForm\frmModeloConsultaSimples.resx">
+      <DependentUpon>frmModeloConsultaSimples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmSubGrupoMaterial.resx">
+      <DependentUpon>frmSubGrupoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmUnidadeDeMedida.resx">
+      <DependentUpon>frmUnidadeDeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmTipoPagamento.resx">
+      <DependentUpon>frmTipoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimentos\frmMovimentacaoCompra.resx">
+      <DependentUpon>frmMovimentacaoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\ModelosForm\frmModeloCadastro.resx">
+      <DependentUpon>frmModeloCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\ModelosForm\frmModeloConsulta.resx">
+      <DependentUpon>frmModeloConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente 80x71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SlidingMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inserirflat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localizarflat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inserirflatEs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvarflatEs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelarflatEs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alterarflatEs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LixoflatEs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sairflatEs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limparflat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{5470c0a0-4a35-45d4-bcd4-7dd3dcc5daef}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{cc935420-d4a0-445c-92c2-f0f1f9eb1812}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ferramentas\Ferramentas.csproj">
+      <Project>{34b7f247-1467-4a10-884b-eee5290b55a3}</Project>
+      <Name>Ferramentas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODELO\MODELO.csproj">
+      <Project>{10a457f2-3c38-4cc2-a17c-4b6599d51800}</Project>
+      <Name>MODELO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.pesq 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.pesq.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.pesq.icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.pesq 16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inserir 34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inserir 34x341.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inserirflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localizarflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alterarflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvarflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelarflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lixoflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sairflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limparflat40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apontar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalizar40x40.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
